@@ -1,69 +1,43 @@
 <!DOCTYPE html>
 <html lang="en" dir="rtl">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="index.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
-    />
-  </head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+</head>
 
-  <body class="w-screen h-screen flex items-center">
-    <div
-      class="w-screen h-3/5 flex justify-center items-center bg-red-700 max-sm:h-fit max-sm:w-full overflow-hidden"
-    >
-      <div class="rounded-3xl w-4/5 h-4/5">
-        <div class="w-full h-full flex items-center max-sm:flex-col">
-          <div
-            class="w-4/5 h-full text-white flex flex-col justify-center max-sm:w-full max-sm:items-center"
-            id="content-right "
-          >
-            <h2 class="w-3/4 text-xl p-4 font-bold max-sm:mt-10 max-sm:w-fit">
-              محاسبه گر اقساط
-            </h2>
-            <span class="p-4"
-              >مبلغ درخواستی و مدت زمان بازپرداخت را مشخص کنید
+<body class="w-screen h-screen flex items-center">
+    <div class="w-screen h-3/5 flex justify-center items-center bg-red-700 max-sm:h-fit max-sm:w-full overflow-hidden">
+        <div class="rounded-3xl w-4/5 h-4/5">
+            <div class="w-full h-full flex items-center max-sm:flex-col">
+                <div class="w-4/5 h-full text-white flex flex-col justify-center max-sm:w-full max-sm:items-center" id="content-right ">
+                    <h2 class="w-3/4 text-xl p-4 font-bold max-sm:mt-10 max-sm:w-fit">
+                        محاسبه گر اقساط
+                    </h2>
+                    <span class="p-4">مبلغ درخواستی و مدت زمان بازپرداخت را مشخص کنید
             </span>
-            <span class="text-sm p-4">مبلغ وام (تومان) </span>
-            <div
-              class="w-11/12 h-10 rounded-xl flex justify-between items-center p-4 font-bold bg-white"
-            >
-              <i class="bi bi-dash-lg cursor-pointer text-black"></i>
-              <span class="text-black"
-                ><span id="showVolume2"> 10</span>میلیون تومان</span
-              >
-              <i class="bi bi-plus-lg cursor-pointer text-black"></i>
-            </div>
-            <div class="w-11/12 mt-6 h-8 flex flex-col">
-              <input
-                class="w-full h-full"
-                type="range"
-                id="volume2"
-                name="volume"
-                min="5"
-                max="50"
-                value="5"
-              />
-            </div>
+                    <span class="text-sm p-4">مبلغ وام (تومان) </span>
+                    <div class="w-11/12 h-10 rounded-xl flex justify-between items-center p-4 font-bold bg-white">
+                        <i class="bi bi-dash-lg cursor-pointer text-black" id="dash"></i>
+                        <span class="text-black"><span id="showVolume2"> 5</span>میلیون تومان</span>
+                        <i class="bi bi-plus-lg cursor-pointer text-black" id="pluss"></i>
+                    </div>
+                    <div class="w-11/12 mt-6 h-8 flex flex-col">
+                        <input class="w-full h-full" type="range" id="volume2" name="volume" min="5" max="50" value="5" />
+                    </div>
 
-            <div class="flex w-11/12 justify-between text-sm mt-2">
-              <span>5 میلیون تومان </span>
-              <span>50 میلیون تومان </span>
-            </div>
-            <div
-              class="flex w-11/12 justify-between items-center mt-10 font-bold max-sm:w-fit"
-            >
-              <span class="text-lg max-sm:hidden">مدت زمان بازپرداخت </span>
-              <div class="flex max-sm:mb-10 rounded-3xl bg-white ChoiseTime">
-                <button
-                  data-time="19.04"
-                  data-time2="15.5"
-                  class="w-52 h-12 max-sm:w-1/2 bg-white rounded-3xl px-8 text-red-700"
-                >
+                    <div class="flex w-11/12 justify-between text-sm mt-2">
+                        <span>5 میلیون تومان </span>
+                        <span>50 میلیون تومان </span>
+                    </div>
+                    <div class="flex w-11/12 justify-between items-center mt-10 font-bold max-sm:w-fit">
+                        <span class="text-lg max-sm:hidden">مدت زمان بازپرداخت </span>
+                        <div class="flex max-sm:mb-10 rounded-3xl bg-white ChoiseTime">
+                            <button data-time="19.04" data-time2="15.5" class="w-52 h-12 max-sm:w-1/2 bg-white rounded-3xl px-8 text-red-700">
                   18ماهه</button
                 ><button
                   data-time="13.04"
@@ -72,22 +46,17 @@
                 >
                   12ماهه
                 </button>
-              </div>
-            </div>
-          </div>
+                        </div>
+                    </div>
+                </div>
 
-          <!-- card -->
+                <!-- card -->
 
-          <div
-            class="w-2/5 h-fit p-5 rounded-lg bg-white flex flex-col max-sm:w-full max-sm:mb-5"
-            id="content-left "
-          >
-            <!-- title-card -->
-            <div class="w-full flex justify-between mt-2">
-              <span>gajet</span>
-              <span
-                class="bg-red-700 bg-opacity-30 w-16 h-10 text-sm rounded-2xl flex justify-center items-center"
-                >22 درصد</span
+                <div class="w-2/5 h-fit p-5 rounded-lg bg-white flex flex-col max-sm:w-full max-sm:mb-5" id="content-left ">
+                    <!-- title-card -->
+                    <div class="w-full flex justify-between mt-2">
+                        <span>gajet</span>
+                        <span class="bg-red-700 bg-opacity-30 w-16 h-10 text-sm rounded-2xl flex justify-center items-center">22 درصد</span
               >
             </div>
             <!-- body card -->
@@ -96,35 +65,29 @@
                 <p class="text-xs">مبلغ قسط ماهانه</p>
                 <span class="font-bold text-xl"
                   ><span id="Installment">935,582</span> تومان
-                </span>
-              </div>
-              <hr />
-              <div class="flex justify-between items-center mt-9 mb-9">
-                <p class="text-xs">
-                  مابه‌التفاوت خرید نقدی و قسطی ازکی‌وام<br /><br />
-                  <span class="text-opacity-50"
-                    >(معادل <span id="taskN"></span> درصد از مبلغ کل اعتبار)
-                  </span>
-                </p>
-                <span class="font-bold text-xl"
-                  ><span id="tax">1,250,000</span> تومان
-                </span>
-              </div>
-            </div>
-            <hr />
-            <!-- footer card -->
-            <div class="flex flex-col mt-4 items-center">
-              <span
-                ><span class="font-bold text-2xl text-red-700" id="final"
+                        </span>
+                    </div>
+                    <hr />
+                    <div class="flex justify-between items-center mt-9 mb-9">
+                        <p class="text-xs">
+                            مابه‌التفاوت خرید نقدی و قسطی ازکی‌وام<br /><br />
+                            <span class="text-opacity-50">(معادل <span id="taskN"></span> درصد از مبلغ کل اعتبار)
+                            </span>
+                        </p>
+                        <span class="font-bold text-xl"><span id="tax">1,250,000</span> تومان
+                        </span>
+                    </div>
+                </div>
+                <hr />
+                <!-- footer card -->
+                <div class="flex flex-col mt-4 items-center">
+                    <span><span class="font-bold text-2xl text-red-700" id="final"
                   >12,481,326</span
                 >
                 تومان
               </span>
-              <span class="mt-1 mb-8 text-xs">مجموع اقساط و مابه‌التفاوت </span>
-              <a
-                href="page2.html"
-                class="w-full text-white flex justify-center items-center font-bold h-12 bg-red-700 rounded-xl"
-                >درخواست اعتبار</a
+                    <span class="mt-1 mb-8 text-xs">مجموع اقساط و مابه‌التفاوت </span>
+                    <a href="page2.html" class="w-full text-white flex justify-center items-center font-bold h-12 bg-red-700 rounded-xl">درخواست اعتبار</a
               >
             </div>
           </div>
