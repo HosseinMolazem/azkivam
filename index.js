@@ -71,9 +71,11 @@ const newpage = $.getElementById("newpage");
 const formdata = new FormData();
 
 // volume
-volumeInp.addEventListener("change", (e) => {
-  showVolume.innerHTML = e.target.value;
-});
+volumeInp.addEventListener("change", test);
+
+function test() {
+  showVolume.innerHTML = volumeInp.value;
+}
 
 // page1
 
