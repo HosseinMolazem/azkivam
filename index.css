@@ -1,0 +1,130 @@
+input[type="range"] {
+    height: 23px;
+    -webkit-appearance: none;
+    margin: 10px 0;
+    width: 100%;
+    border-radius: 20px;
+}
+
+input[type="range"]:focus {
+    outline: none;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 22px;
+    cursor: pointer;
+    animate: 0.2s;
+    box-shadow: 0px 0px 8px #000000;
+    background: #fff7f7;
+    border-radius: 24px;
+    border: 0px solid #000101;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    box-shadow: 0px 0px 5px #000000;
+    border: 0px solid #000000;
+    height: 17px;
+    width: 16px;
+    border-radius: 40px;
+    background: #db003d;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: 2.5px;
+}
+
+input[type="range"]:focus::-webkit-slider-runnable-track {
+    background: #fff7f7;
+}
+
+input[type="range"]::-moz-range-track {
+    width: 100%;
+    height: 22px;
+    cursor: pointer;
+    animate: 0.2s;
+    box-shadow: 0px 0px 8px #000000;
+    background: #fff7f7;
+    border-radius: 24px;
+    border: 0px solid #000101;
+}
+
+input[type="range"]::-moz-range-thumb {
+    box-shadow: 0px 0px 5px #000000;
+    border: 0px solid #000000;
+    height: 17px;
+    width: 16px;
+    border-radius: 40px;
+    background: #db003d;
+    cursor: pointer;
+}
+
+input[type="range"]::-ms-track {
+    width: 100%;
+    height: 22px;
+    cursor: pointer;
+    animate: 0.2s;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+}
+
+input[type="range"]::-ms-fill-lower {
+    background: #fff7f7;
+    border: 0px solid #000101;
+    border-radius: 48px;
+    box-shadow: 0px 0px 8px #000000;
+}
+
+input[type="range"]::-ms-fill-upper {
+    background: #fff7f7;
+    border: 0px solid #000101;
+    border-radius: 48px;
+    box-shadow: 0px 0px 8px #000000;
+}
+
+input[type="range"]::-ms-thumb {
+    margin-top: 1px;
+    box-shadow: 0px 0px 5px #000000;
+    border: 0px solid #000000;
+    height: 17px;
+    width: 16px;
+    border-radius: 40px;
+    background: #db003d;
+    cursor: pointer;
+}
+
+input[type="range"]:focus::-ms-fill-lower {
+    background: #fff7f7;
+}
+
+input[type="range"]:focus::-ms-fill-upper {
+    background: #f7fffa;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.mySlides {
+    display: none;
+}
+
+.loader {
+    display: none;
+    /* Light grey */
+    border-top: 16px solid #3498db;
+    /* Blue */
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

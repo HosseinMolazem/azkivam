@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <title>Document</title>
+  </head>
+
+  <body class="bg-red-700 overflow-hidden">
+    <!-- Slideshow container -->
+    <div
+      class="slideshow-container w-screen h-screen relative overflow-hidden flex justify-center max-sm:w-screen max-sm:h-screen"
+    >
+      <!-- The dots/circles -->
+      <div
+        class="w-3/5 h-fit flex justify-end absolute top-32 text-xl font-bold max-sm:top-0 max-sm:left-0"
+      >
+        <a
+          href="./index.html"
+          class="w-1/12 h-10 max-sm:w-16 mr-2 z-50 text-white cursor-pointer"
+          >خروج
+        </a>
+      </div>
+      <div class="mySlides fade flex items-center">
+        <div class="w-screen h-screen flex justify-center items-center">
+          <div
+            class="w-3/5 h-2/3 bg-white rounded-3xl flex flex-col items-center p-10 max-sm:w-full max-sm:h-fit"
+          >
+            <img
+              class="w-1/3 mt-5 max-sm:w-1/2"
+              src="./img/usefull.svg"
+              alt=""
+            />
+            <h3 class="font-bold text-xl mt-8 mb-7 text-red-700">
+              چه طرحی برای شما مناسب‌تر است؟
+            </h3>
+            <p class="text-slate-950 flex justify-center">
+              در ادامه، در کمتر از یک دقیقه و با پاسخ‌ دادن به چند سوال
+              می‌توانید طرح‌های متناسب با شرایط خودتان را مشاهده کنید. در نظر
+              داشته باشید که اطلاعات ثبت شد در این مسیر، در روند دریافت اعتبار
+              با مدارک شغلی یا مالی شما تطبیق داده خواهند شد.
+            </p>
+            <button
+              onclick="plusSlides(1)"
+              class="px-32 py-2 mt-16 text-white bg-red-700 rounded-xl font-bold"
+            >
+              شروع
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="mySlides fade flex items-center">
+        <div class="w-screen h-screen flex justify-center items-center">
+          <div
+            class="w-3/5 h-2/3 bg-white rounded-3xl flex flex-col p-10 max-sm:w-full max-sm:h-fit"
+          >
+            <!-- title card -->
+            <div>
+              <div class="mb-7 text-red-700">سوال 1 از 3 :</div>
+              <span class="font-bold text-xl mb-20"
+                >مبلغ اعتبار مد نظر شما چقدر است؟
+              </span>
+            </div>
+
+            <!-- body card -->
+            <div class="w-full">
+              <div
+                class="w-11/12 h-10 rounded-xl flex mt-10 mb-5 justify-center items-center p-4 font-bold bg-white"
+              >
+                <span class="text-red-700 text-4xl mt-8 font-bold"
+                  ><span class="" id="showVolume">10</span>میلیون تومان</span
+                >
+              </div>
+              <div class="w-full mt-10 h-8 flex flex-col">
+                <input
+                  class="w-full h-full"
+                  type="range"
+                  id="volume"
+                  value="10"
+                  name="volume"
+                  min="10"
+                  max="75"
+                />
+              </div>
+
+              <div
+                class="flex w-full justify-between text-red-700 text-sm mt-2"
+              >
+                <span>10 میلیون تومان </span>
+                <span>75 میلیون تومان </span>
+              </div>
+            </div>
+
+            <div class="w-full mt-9 font-bold max-sm:w-full">
+              <span class="text-xl"
+                >مدت زمان بازپرداخت خود را انتخاب کنید.
+              </span>
+              <div
+                class="flex justify-center max-sm:mb-10 mt-9 mb-9 ChoiseTime"
+                id="ChoiseTime"
+              >
+                <button
+                  class="w-3/6 h-12 bg-white rounded-3xl px-8 border border-red-700 text-red-700 shadow-2xl hover:bg-red-700 hover:text-white transition-all"
+                  data-time="18"
+                >
+                  18ماهه</button
+                ><button
+                  data-time="12"
+                  class="w-3/6 mr-3 h-12 bg-white rounded-3xl px-8 border border-red-700 text-red-700 shadow-2xl hover:bg-red-700 hover:text-white transition-all"
+                >
+                  12ماهه
+                </button>
+              </div>
+            </div>
+
+            <!-- footer card -->
+            <div class="flex justify-between w-full mt-20 font-bold">
+              <button
+                class="w-3/12 h-12 text-red-700 rounded-lg px-8"
+                onclick="plusSlides(-1)"
+              >
+                &#10094;&nbsp;&nbsp;قبلی</button
+              ><button
+                id="next1"
+                class="w-3/5 mr-3 h-12 rounded-xl px-8 text-white shadow-2xl bg-red-700 hover:bg-red-800 transition-all"
+                onclick="plusSlides(1)"
+              >
+                بعدی &nbsp;&nbsp;&#10095;
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mySlides fade flex items-center">
+        <div class="w-screen h-screen flex justify-center items-center">
+          <div
+            class="w-3/5 h-2/3 bg-white rounded-3xl flex flex-col p-10 max-sm:w-full max-sm:h-fit"
+          >
+            <!-- title card -->
+            <div>
+              <div class="mb-7 text-red-700">سوال 2 از 3 :</div>
+              <span class="font-bold text-xl mb-20"
+                >شغل خود را انتخاب کنید ؟
+              </span>
+            </div>
+
+            <!-- body card -->
+            <label
+              data-job="کارمند دولتی"
+              class="w-full rounded-xl font-bold border mt-4 border-opacity-30 text-slate-500 border-gray-500 shadow-2xl p-7 hover:bg-red-700 hover:text-white"
+              for="rad"
+            >
+              <input
+                class="w-5 h-4"
+                type="radio"
+                name="rad"
+                id="rad"
+                value=""
+              />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; کارمند دولتی
+            </label>
+
+            <label
+              data-job="بازنشسته"
+              class="w-full rounded-xl font-bold border mt-4 border-opacity-30 text-slate-500 border-gray-500 shadow-2xl p-7 hover:bg-red-700 hover:text-white"
+              for="rad2"
+            >
+              <input
+                class="w-5 h-4"
+                type="radio"
+                name="rad"
+                id="rad2"
+                value=""
+              />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; بازنشسته
+            </label>
+            <label
+              data-job="آزاد"
+              class="w-full rounded-xl font-bold border mt-4 border-opacity-30 text-slate-500 border-gray-500 shadow-2xl p-7 hover:bg-red-700 hover:text-white"
+              for="rad3"
+            >
+              <input
+                class="w-5 h-4"
+                type="radio"
+                name="rad"
+                id="rad3"
+                value=""
+              />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; آزاد
+            </label>
+            <label
+              data-job="کارمند خصوصی"
+              class="w-full rounded-xl font-bold border mt-4 border-opacity-30 text-slate-500 border-gray-500 shadow-2xl p-7 hover:bg-red-700 hover:text-white"
+              for="rad4"
+            >
+              <input
+                class="w-5 h-4"
+                type="radio"
+                name="rad"
+                id="rad4"
+                value="df"
+              />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; کارمند خصوصی
+            </label>
+
+            <!-- footer card -->
+            <div class="flex justify-between w-full mt-10 font-bold">
+              <button
+                class="w-3/12 h-12 bg-white text-red-700 rounded-lg px-8"
+                onclick="plusSlides(-1)"
+              >
+                &#10094;&nbsp;&nbsp;قبلی</button
+              ><button
+                id="next2"
+                class="w-3/5 mr-3 h-12 rounded-xl px-8 bg-red-700 text-white shadow-2xl hover:bg-red-800 transition-all"
+                onclick="plusSlides(1)"
+              >
+                بعدی &nbsp;&nbsp;&#10095;
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mySlides fade flex items-center">
+        <div class="w-screen h-screen flex justify-center items-center">
+          <div
+            class="w-3/5 h-fit bg-white rounded-3xl flex flex-col p-10 max-sm:w-full max-sm:h-fit"
+          >
+            <!-- title card -->
+            <div>
+              <div class="mb-7 text-red-700">سوال 3 از 4:</div>
+              <span class="font-bold text-xl mb-20">مدارک مورد نیاز </span>
+            </div>
+
+            <!-- body card -->
+            <div class="w-full h-fit flex justify-between mt-5 font-bold">
+              <label class="w-fit h-fit" for="fish"
+                >فیش حقوقی یا گردش حساب
+                <input type="file" name="" id="fish" /></label
+              ><label class="w-fit h-fit ml-12" for="personCart"
+                >تصویر کارت ملی <input type="file" name="" id="personCart"
+              /></label>
+            </div>
+            <div class="w-full h-fit flex justify-between mt-5 font-bold">
+              <label class="w-fit h-fit" for="chek"
+                >تصوریر چک صیادی <input type="file" name="" id="chek"
+              /></label>
+              <label class="w-fit h-fit ml-10 max-sm:ml-0" for="shenasname"
+                >تصویر شناسنامه <input type="file" name="" id="shenasname" />
+              </label>
+            </div>
+            <div class="w-full h-fit mt-8">
+              <span class="font-bold mt-20 text-xl mb-1 text-slate-700"
+                >کد ملی خود را وارد کنید
+              </span>
+              <input
+                id="codmeli"
+                class="w-full mt-1 p-2 mb-5 rounded-xl border border-slate-600 outline-red-700"
+                type="text"
+                placeholder=""
+              />
+              <span class="font-bold text-xl mb-10 text-slate-700">
+                شماره تماس خود را وارد کنید</span
+              >
+              <input
+                id="telphone"
+                class="w-full mt-1 p-2 mb-2 rounded-xl border border-slate-600 outline-red-700"
+                type="text"
+                placeholder=""
+              />
+            </div>
+            <div class="mt-5 font-bold w-full h-fit">
+              <span class="text-xl mb-6">موارد قابل توجه </span>
+              <div class="w-full h-full flex justify-center items-center">
+                <ul>
+                  <li>
+                    برای مبالغ بالای ۵۰میلیون تومان احتیاج به یک ضامن و مراجعه
+                    حضوری می باشد
+                  </li>
+                  <li>
+                    شماره موبایل باید به نام شخص دارای کارت ملی وارده باشد
+                  </li>
+                </ul>
+                <ul class="mt-2 mr-8">
+                  <li class="">
+                    افراد دارای شغل های آزاد میتوانند به جای فیش حقوقی گردش
+                    حسابشون رو ارسال کنند
+                  </li>
+                  <li>لطفا تمام موارد را با دقت چک کرده و ارسال فرمایید</li>
+                </ul>
+              </div>
+            </div>
+            <!-- footer card -->
+            <div class="flex justify-between w-full mt-10 font-bold">
+              <button
+                class="w-3/12 h-12 bg-white text-red-700 rounded-lg px-8"
+                onclick="plusSlides(-1)"
+              >
+                &#10094;&nbsp;&nbsp;قبلی</button
+              ><button
+                id="newpage"
+                class="w-3/5 mr-3 h-12 rounded-xl px-8 bg-red-700 text-white shadow-2xl hover:bg-red-800 transition-all"
+                onclick="plusSlides(1)"
+              >
+                بعدی &nbsp;&nbsp;&#10095;
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mySlides fade flex items-center">
+        <div
+          class="w-screen h-screen flex justify-center items-center relative"
+        >
+          <div class="w-3/5 h-2/3 bg-white rounded-3xl relative">
+            <div
+              class="loader absolute max-sm:top-48 max-sm:left-24 right-[470px] top-64"
+              id="loader"
+            ></div>
+
+            <div
+              class="flex flex-col p-10 max-sm:w-full max-sm:h-fit"
+              id="displayPage3"
+            >
+              <!-- title card -->
+              <div>
+                <div class="mb-7 text-red-700">سوال 4 از 4 :</div>
+                <span class="font-bold text-xl mb-20 text-slate-700"
+                  >میزان حقوق دریافتی ماهیانه خود را وارد کنید.
+                </span>
+                <br />
+                <input
+                  id="inpSalary"
+                  class="w-full mt-6 p-4 mb-8 rounded-xl border border-slate-600 outline-red-700"
+                  type="text"
+                  placeholder="ریال"
+                />
+              </div>
+
+              <!-- body card -->
+              <div class="w-full h-full">
+                <span class="font-bold text-xl text-slate-700 mt-20"
+                  >آیا شما درحال حاضر قسط فعال دارید؟ </span
+                ><br /><br />
+                <div class="w-full flex items-center" id="Installment">
+                  <input
+                    data-Installment="true"
+                    class="w-5 h-5"
+                    type="radio"
+                    name="question"
+                    value="yes"
+                  />
+                  <label
+                    data-Installment="true"
+                    class="text-red-700 text-xl font-bold ml-6 mr-3"
+                    for=""
+                    >بله</label
+                  >
+
+                  <input
+                    data-Installment="false"
+                    class="w-5 h-5"
+                    type="radio"
+                    name="question"
+                    value="no"
+                  />
+                  <label
+                    data-Installment="false"
+                    class="text-red-700 font-bold text-xl mr-3"
+                    >خیر</label
+                  >
+                </div>
+                <br />
+
+                <span class="font-bold text-xl mb-8 mt-10 text-slate-700"
+                  >مقدار هزینه اقساط ماهیانه خود را وارد کنید: </span
+                ><br />
+                <input
+                  id="installmentFee"
+                  class="w-full mt-6 p-4 mb-8 rounded-xl border border-slate-600 outline-red-700"
+                  type="text"
+                  placeholder="ریال"
+                />
+              </div>
+              <span class="w-full bg-green-500 p-4 rounded-xl bg-opacity-30"
+                >توجه داشته باشید که این اطلاعات، در فرایند دریافت وام شما با
+                مدارک حقوقی شما مطابقت داده خواهد شد.</span
+              >
+
+              <!-- footer card -->
+              <div class="flex justify-between w-full mt-10 font-bold">
+                <button
+                  class="w-3/12 h-12 bg-white text-red-700 rounded-lg px-8"
+                  onclick="plusSlides(-1)"
+                >
+                  &#10094;&nbsp;&nbsp;قبلی</button
+                ><button
+                  id="next3"
+                  class="w-3/5 mr-3 h-12 rounded-xl px-8 bg-red-700 text-white shadow-2xl hover:bg-red-800 transition-all"
+                >
+                  مشاهده نتایج &nbsp;&nbsp;&#10095;
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br />
+  </body>
+  <script src="index.js"></script>
+</html>
