@@ -8,7 +8,7 @@ const taskN = $.getElementById("taskN");
 const final = $.getElementById("final");
 let time = 13.04;
 let time2 = 12.5;
-volumeInp2.addEventListener("mousemove", test);
+volumeInp2.addEventListener("change", test);
 
 function test(e) {
     showVolume2.innerHTML = e.target.value;
