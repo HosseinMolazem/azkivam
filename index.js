@@ -98,11 +98,7 @@ ChoiseTime.forEach((item) => {
 nextPage.addEventListener("click", () => {
     data.validity = Number(showVolume.innerHTML * 1000000);
     data.time = Number(time);
-    // formdata.append("validity", Number(showVolume.innerHTML * 1000000));
-    // formdata.append("time", Number(time));
-    // for (const [key, value] of formdata) {
-    //     console.log(`${key} nad  ${value}`);
-    // }
+
 });
 
 // page2
@@ -116,10 +112,7 @@ lable.forEach((item) => {
 
 nextPage2.addEventListener("click", () => {
     data.job = job;
-    // formdata.append("job", job);
-    // for (const [key, value] of formdata) {
-    //     console.log(`${key} nad  ${value}`);
-    // }
+
 });
 
 // new page
@@ -130,15 +123,7 @@ newpage.addEventListener("click", () => {
     data.national_card = personCart.files[0].name;
     data.birth_certificate = shenasname.files[0].name;
     data.pay_slip = fish.files[0].name;
-    // formdata.append("check", chek.files[0]);
-    // formdata.append("national_card", personCart.files[0]);
-    // formdata.append("birth_certificate", shenasname.files[0]);
-    // formdata.append("pay_slip", fish.files[0]);
-    // formdata.append("phone", Number(telphone.value));
-    // formdata.append("nationality_code", Number(codmeli.value));
-    // for (const [key, value] of formdata) {
-    //     console.log(`${key} nad  ${value}`);
-    // }
+
 });
 
 // page3
@@ -149,21 +134,12 @@ Installment.childNodes.forEach((item) => {
     });
 });
 nextPage3.addEventListener("click", async() => {
-    let loader = true;
 
     data.salary = Number(inpSalary.value);
     data.installment = installment;
     data.installment_fee = Number(installmentFee.value);
-    console.log(data);
-    // formdata.append("salary", Number(inpSalary.value));
-    // formdata.append("installment", installment);
-    // formdata.append("installment_fee", Number(installmentFee.value));
 
-    // for (const [key, value] of formdata) {
-    //     console.log(`${key} nad  ${value}`);
-    // }
-    displayPage3.style.display = "none";
-    loaderd.style.display = "block";
+
 
     if (
         data.birth_certificate &&
@@ -195,8 +171,7 @@ nextPage3.addEventListener("click", async() => {
                         icon: "success",
                         confirmButtonText: "Ok",
                     });
-                    loaderd.style.display = "none";
-                    displayPage3.style.display = "block";
+
                 }
             });
         } catch (error) {
@@ -207,10 +182,8 @@ nextPage3.addEventListener("click", async() => {
                 icon: "error",
                 confirmButtonText: "Ok",
             });
-            loaderd.style.display = "none";
-            displayPage3.style.display = "block";
+
         }
-        console.log(data);
     } else {
         Swal.fire({
             title: "خطا!",
@@ -218,8 +191,7 @@ nextPage3.addEventListener("click", async() => {
             icon: "error",
             confirmButtonText: "Ok",
         });
-        loaderd.style.display = "none";
-        displayPage3.style.display = "block";
+
     }
 });
 
